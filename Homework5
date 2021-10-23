@@ -1,0 +1,165 @@
+import java.io.PrintStream;
+
+public class Main {
+    public int age;
+
+    public static void main(String[] args) {
+        Staff staff1 = new Staff("Васильев Илья Иванович","Васильев Илья Иванович","vasilil@mail.ru",
+                "89115454555", 60000,65 );
+        Staff staff2 = new Staff("Иванов Игорь Сергеевич","Бухгалтер","fgdr@mail.ru","89095586554",
+                50000,42);
+        Staff staff3 = new Staff("Вавилов Иван Петрович","Водитель","daser@mail.ru","89994545879",
+                35000,33);
+        Staff staff4 = new Staff("Перекрова Тамара Евграфьевна","Убощица","perkor@mail.ru","89656547845",
+                20000,22);
+        Staff staff5 = new Staff("Курочкин Семен Маркович","Охранник","kurochka@mail.ru",
+                "89115547840", 15000, 26 );
+       print(staff1);
+        print(staff2);:
+        print(staff3);
+        print(staff4);
+        print(staff5);
+
+
+
+
+        Staff staff = new Staff();
+        staff.name = "Васильев Илья Иванович";
+        staff.post = "Васильев Илья Иванович";
+        staff.email = "vasilil@mail.ru";
+        staff.tel = "89115454555";
+        staff.salary = 60000;
+        staff.age = 65;
+
+        Staff staff2 = new Staff();
+        staff.name = "Иванов Игорь Сергеевич";
+        staff.post = "Бухгалтер";
+        staff.email = "fgdr@mail.ru";
+        staff.tel = "89095586554";
+        staff.salary = 50000;
+        staff.age = 42;
+
+        Staff staff3 = new Staff();
+        staff.name = "Вавилов Иван Петрович";
+        staff.post = "Водитель";
+        staff.email = "daser@mail.ru";
+        staff.tel = "89994545879";
+        staff.salary = 35000;
+        staff.age = 33;
+
+        Staff staff4 = new Staff();
+        staff.name = "Перекрова Тамара Евграфьевна";
+        staff.post = "Убощица";
+        staff.email = "perkor@mail.ru";
+        staff.tel = "89656547845";
+        staff.salary = 20000;
+        staff.age = 22;
+
+        Staff staff5 = new Staff();
+        staff.name = "Курочкин Семен Маркович";
+        staff.post = "Охранник";
+        staff.email = "kurochka@mail.ru";
+        staff.tel = "89115547840";
+        staff.salary = 15000;
+        staff.age = 26;
+        print(staff3);
+
+    }
+
+    private static void print(Staff staff1) {
+
+
+    public void setAge(int age) {
+        if (age >= 40) {
+            this.age = age;
+       } else {
+            System.out.println("Сотрудник старше 40 лет");
+        }
+   }*/
+
+   public int getAge() {
+        int age;
+        return age;
+
+
+       public static void print (Staff staff){
+          PrintStream printf = System.out.printf("ФИО сотрудника = %s, Должность = %s, Почта = %s, Телефон = %s, Заработная плата =%s, Возраст = %s",
+                   staff.getName(), staff.getPost(), staff.getEmail(), staff.getTel(), staff.getSalary(), staff.getAge());
+
+
+        }
+
+    }
+
+
+public class Staff {
+    private String name;
+    private String post;
+    private String email;
+    private String tel;
+    private int salary;
+    private int age;
+
+    public String getName() {
+        return this.name;
+
+    }
+    public void setName(String name) {
+        this name = name;
+    }
+
+    public void setPost(String post) {
+        this post = post;
+    }
+    public String getPost() {
+        return this.post;
+
+    }
+    public String getEmail() {
+        return this.email;
+
+    }
+
+    public void setEmail(String email) {
+        this email = email;
+    }
+    public String getTel() {
+        return this.tel;
+
+    }
+
+    public void setTel(String tel) {
+        this tel = tel;
+    }
+    public int getSalary() {
+        return this.salary;
+
+    }
+
+    public void setSalary(int salary) {
+        this salary = salary;
+    }
+    public int getAge() {
+        return this.age;
+
+    }
+    public void setAge(int age) {
+        this age = age;
+        if(age >= 40) {
+            System.out.println("Сотрудник старше 40 лет");
+            return;
+        }
+    }
+
+
+
+    public Staff(String _name, String _post, String _email, String _tel, int _salary, int _age) {
+        this.name = _name;
+        this.post = _post;
+        this.email = _email;
+        this.tel = _tel;
+        this.salary = _salary;
+        this.age = _age;
+    }
+}
+
